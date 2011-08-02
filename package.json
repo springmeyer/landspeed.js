@@ -1,0 +1,10 @@
+{
+    "name": "foss4g-benchmark-server",
+    "version": "0.0.1",
+
+    "main": "./server",
+
+    "dependencies": {
+        "mapnik": "0.4.x"
+    }
+}

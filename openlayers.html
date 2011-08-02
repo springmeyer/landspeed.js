@@ -1,0 +1,10 @@
+<script src="http://openlayers.org/dev/OpenLayers.js"></script>
+
+<div id="map" style="width: 600px; height: 400px"></div>
+<script>
+var map = new OpenLayers.Map('map');
+var layer = new OpenLayers.Layer.WMS("FOSS4G Mapnik Benchmark", "http://localhost:8000/");
+// layer.projection = 
+map.addLayer(layer);
+map.setCenter(new OpenLayers.LonLat(-77.03242, 38.91294), 15);
+</script>
