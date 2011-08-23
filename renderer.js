@@ -38,7 +38,7 @@ module.exports = function(args) {
 
         maps.acquire(function(map) {
             map.resize(query.width, query.height);
-            map.srs = '+init=' + query.srs;
+            if (query.srs) map.srs = '+init=' + query.srs;
             map.extent = bbox;
 
             var canvas = new mapnik.Image(query.width, query.height);
