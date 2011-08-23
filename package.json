@@ -5,6 +5,7 @@
     "main": "./server",
 
     "dependencies": {
-        "mapnik": "0.4.x"
+        "mapnik": "0.4.x",
+        "eio": "0.0.x"
     }
 }

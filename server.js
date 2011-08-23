@@ -4,7 +4,7 @@ var http = require('http');
 var url = require('url');
 
 var stylesheet = process.argv[2];
-var concurrency = 10;
+var concurrency = require('os').cpus().length * 8;
 var port = +process.argv[3] || 8000;
 
 if (!stylesheet) {
