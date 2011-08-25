@@ -5,7 +5,8 @@ var util = require('util');
 var Pool = require('./pool');
 
 // Increase number of threads to 1.5x the number of logical CPUs.
-var threads = Math.ceil(Math.max(4, require('os').cpus().length * 1.5));
+var threads = require('os').cpus().length + 4;
+console.warn('Using %d threads', threads);
 require('eio').setMinParallel(threads);
 
 module.exports = function(args) {
@@ -54,7 +55,8 @@ module.exports = function(args) {
                 if (err) {
                     callback(err);
                 } else {
-                    image.encode('png', callback);
+                    image.encode('png8:z=1', callback);
+
                 }
             });
         });

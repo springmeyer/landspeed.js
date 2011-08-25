@@ -4,6 +4,7 @@ function Pool(initialize, capacity) {
     this.waiting = [];
 
     if (!capacity) capacity = 5;
+    console.warn('Pool capacity: %d', capacity);
     process.nextTick(function() {
         for (var i = 0; i < capacity; i++) {
             initialize();
