@@ -22,6 +22,7 @@ module.exports = function(args) {
             base: path.dirname(args.stylesheet)
         }, function(err, map) {
             if (err) throw err;
+            map.zoomAll();
             maps.release(map);
         });
     }, args.concurrency);
