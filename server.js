@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var mapnik = require('mapnik');
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
