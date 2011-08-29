@@ -2,19 +2,22 @@
 
 var http = require('http');
 var url = require('url');
+var fs = require('fs');
 
 var stylesheet = process.argv[2];
 var port = +process.argv[3] || 8000;
 var concurrency = parseInt(process.argv[4] || 32, 10);
+var palette = process.argv[5] ? new mapnik.Palette(fs.readFileSync(process.argv[5]), 'act') : false;
 
 if (!stylesheet) {
-   console.warn('usage: ./server.js <stylesheet> <port>');
+   console.warn('usage: ./server.js <stylesheet> <port> <concurrency> <palette>');
    process.exit(1);
 }
 
 var renderer = require('./renderer')({
     stylesheet: stylesheet,
-    concurrency: concurrency
+    concurrency: concurrency,
+    palette: palette
 });
 
 var server = http.createServer(function(req, res) {
