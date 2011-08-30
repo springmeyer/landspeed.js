@@ -15,6 +15,7 @@ module.exports = function(args) {
     if (!args.concurrency) args.concurrency = 10;
     if (!args.bufferSize) args.bufferSize = 0;
 
+    var created = 0;
     var maps = new Pool(function() {
         var map = new mapnik.Map(256, 256);
         map.bufferSize = args.bufferSize;
@@ -24,6 +25,8 @@ module.exports = function(args) {
         }, function(err, map) {
             if (err) throw err;
             map.zoomAll();
+            created++;
+            util.print('\rCreating map objects (' + created + '/' + args.concurrency + ')...');
             maps.release(map);
         });
     }, args.concurrency);
