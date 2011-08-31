@@ -59,7 +59,7 @@ module.exports = function(args) {
                     callback(err);
                 } else {
                     if (args.palette) {
-                        image.encode('png8:z=1', {palette:args.palette}, callback);
+                        image.encode('png8:z=1', {palette: args.palette}, callback);
                     } else {
                         image.encode('png:z=1', callback);
                     }
