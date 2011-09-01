@@ -1,0 +1,11 @@
+#!/bin/bash
+POOL=4
+CMD="./server.js ../foss4g-benchmark-style/map.xml "
+$CMD 8091 $POOL &
+$CMD 8092 $POOL &
+$CMD 8093 $POOL &
+$CMD 8094 $POOL #&
+#$CMD 8095 $POOL &
+#$CMD 8096 $POOL &
+#$CMD 8097 $POOL &
+#$CMD 8098 $POOL
