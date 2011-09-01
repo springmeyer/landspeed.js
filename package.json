@@ -5,7 +5,7 @@
     "main": "./server",
 
     "dependencies": {
-        "mapnik": "0.4.x",
+        "mapnik": "https://github.com/mapnik/node-mapnik/tarball/master",
         "eio": "0.0.x"
     }
 }
