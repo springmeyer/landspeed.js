@@ -1,4 +1,8 @@
-# nodejs wms server
+# landspeed.js
+
+A simple [WMS](http://www.opengeospatial.org/standards/wms) server written in [node.js](http://nodejs.org/)
+
+Only supports WMS 1.1 GetMap requests (bbox, width, height, and srs).
 
 
 ## Requirements
@@ -14,7 +18,8 @@
 
 Install npm if you don't have it already:
 
-    curl http://npmjs.org/install.sh | sh
+    wget http://npmjs.org/install.sh
+    sudo sh install.sh
 
 
 Use npm to install `node-mapnik` and `eio` locally:
@@ -24,4 +29,4 @@ Use npm to install `node-mapnik` and `eio` locally:
 
 ## Run
 
-    ./server.js mapnik.xml 8000
+    ./server.js <stylesheet.xml> <port> <concurrency>
