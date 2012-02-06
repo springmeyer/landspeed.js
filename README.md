@@ -9,7 +9,7 @@ Only supports WMS 1.1 GetMap requests (bbox, width, height, and srs).
 
  * Node.js 0.4.x (http://nodejs.org/)
  
- * Mapnik trunk (http://trac.mapnik.org/wiki/Mapnik2)
+ * Mapnik >= 2.x (https://github.com/mapnik/mapnik)
 
  * NPM (Node package manager)
 
