@@ -22,6 +22,12 @@ Use npm to install `node-mapnik` and `eio` locally:
 
 ## Run
 
+Usage:
+
+    ./server.js <stylesheet.xml> <port> <concurrency>
+
+## Demo
+
 OS X:
 
     open demo/latlon.html && ./server.js demo/world_latlon.xml 8000 `sysctl -n hw.ncpu`
