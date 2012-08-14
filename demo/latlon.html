@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>WMS Test</title>
+    <style type="text/css">
+    html, body { height: 100%; }
+    body {margin: 0px;}
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+    <!-- set up to run local with these commands:
+            wget http://openlayers.org/download/OpenLayers-2.9.zip
+            unzip OpenLayers-2.9.zip
+    -->
+    <!--<script src="Openlayers-2.9/OpenLayers.js"></script>-->
+    
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript">
+        
+        var map;
+        
+        function init(){
+            map = new OpenLayers.Map('map');
+            
+            var servers = ['http://127.0.0.1:8000/']
+            //var servers = ['http://12.189.158.76:8080/']
+
+            wms1 = new OpenLayers.Layer.WMS("Test", servers,
+                    {
+                        layers: ['__all__'],
+                        styles:[''],
+                        format:'image/png'
+                    }, 
+                    {
+                        isBaseLayer: true
+                    }
+                );
+            
+            map.addLayers([wms1]);
+            //map.zoomToExtent(new OpenLayers.Bounds(1.812545,41.333373,2.389184,41.500070))
+            map.zoomToMaxExtent();     
+        }                
+    </script>
+  </head>
+
+  <body onload="init()">
+    <h2 style="position:absolute; z-index:10000; left: 100px;">WMS Test</h2>
+    <div id="map"> </div>
+  </body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map srs="+init=epsg:4326">
+
+  <Style name="style">
+     <Rule>
+       <PolygonSymbolizer />
+     </Rule>    
+   </Style>
+     
+  <Layer name="layer" srs="+init=epsg:4326">
+     <StyleName>style</StyleName>
+     <Datasource>
+        <Parameter name="type">shape</Parameter>
+        <Parameter name="file">data/world_latlon.shp</Parameter>
+     </Datasource>
+  </Layer>
+
+</Map>

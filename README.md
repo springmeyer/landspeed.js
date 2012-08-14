@@ -7,25 +7,18 @@ Only supports WMS 1.1 GetMap requests (bbox, width, height, and srs).
 
 ## Requirements
 
- * Node.js 0.4.x (http://nodejs.org/)
+ * Node.js >= 0.6.x (http://nodejs.org/)
  
  * Mapnik >= 2.x (https://github.com/mapnik/mapnik)
 
- * NPM (Node package manager)
+ * node-mapnik (Node.js bindings to Mapnik)
 
 
 ## Install
 
-Install npm if you don't have it already:
-
-    wget http://npmjs.org/install.sh
-    sudo sh install.sh
-
-
 Use npm to install `node-mapnik` and `eio` locally:
 
     npm install
-
 
 ## Run
 
