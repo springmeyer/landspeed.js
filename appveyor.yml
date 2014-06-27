@@ -1,0 +1,20 @@
+environment:
+  matrix:
+    - nodejs_version: 0.11
+    - nodejs_version: 0.10
+    - nodejs_version: 0.8
+
+platform:
+  - x86
+
+install:
+  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version) $env:Platform
+  - node --version
+  - npm --version
+  - node -e "console.log('node version ' + process.version + ', architecture ' + process.arch);"
+  - npm install
+
+build: OFF
+test: OFF
+test_script: OFF
+deploy: OFF
