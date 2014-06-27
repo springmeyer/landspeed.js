@@ -15,7 +15,7 @@ module.exports = function(args) {
         var map = new mapnik.Map(256, 256);
         map.bufferSize = args.bufferSize;
         map.load(args.stylesheet, {
-            strict: false,
+            strict: true,
             base: path.dirname(args.stylesheet)
         }, function(err, map) {
             if (err) throw err;
@@ -56,7 +56,7 @@ module.exports = function(args) {
                     if (args.palette) {
                         image.encode('png8:z=1', {palette: args.palette}, callback);
                     } else {
-                        image.encode('png:z=1', callback);
+                        image.encode('png32:z=1', callback);
                     }
                 }
             });
