@@ -2,16 +2,15 @@
 
 // Increase the libuv threadpool size to 1.5x the number of logical CPUs.
 var threadpool_size = Math.ceil(Math.max(4, require('os').cpus().length * 1.5));
-// Node >= v0.10.x
 process.env.UV_THREADPOOL_SIZE = threadpool_size
-// Node v0.8.x and older
-require('eio').setMinParallel(threadpool_size);
-console.warn('Using threadpool size of ', threadpool_size);
 
-var mapnik = require('mapnik');
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
+var mapnik = require('mapnik');
+// register fonts and datasource plugins
+mapnik.register_default_fonts();
+mapnik.register_default_input_plugins();
 
 var stylesheet = process.argv[2];
 var port = +process.argv[3] || 8000;
