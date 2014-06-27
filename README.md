@@ -7,17 +7,15 @@ Only supports WMS 1.1 GetMap requests (bbox, width, height, and srs).
 
 ## Requirements
 
- * Node.js >= 0.6.x (http://nodejs.org/)
- 
- * Mapnik >= 2.x (https://github.com/mapnik/mapnik)
-
- * node-mapnik (Node.js bindings to Mapnik)
-
+ - Node.js 0.10.x (http://nodejs.org/)
+ - node-mapnik (Node.js bindings to Mapnik)
 
 ## Install
 
-Use npm to install `node-mapnik` and `eio` locally:
+To install do:
 
+    git clone https://github.com/mapbox/landspeed.js.git
+    cd landspeed.js
     npm install
 
 ## Run
@@ -30,8 +28,8 @@ Usage:
 
 OS X:
 
-    open demo/latlon.html && ./server.js demo/world_latlon.xml 8000 `sysctl -n hw.ncpu`
+    open demo/leaflet.html && ./server.js demo/world_latlon.xml
 
 Linux:
 
-    xdg-open demo/latlon.html && ./server.js demo/world_latlon.xml 8000 `grep -c ^processor /proc/cpuinfo`
+    xdg-open demo/leaflet.html && ./server.js demo/world_latlon.xml
