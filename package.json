@@ -1,11 +1,12 @@
 {
-    "name": "foss4g-benchmark-server",
+    "name": "landspeed",
     "version": "0.0.1",
-
     "main": "./server",
-
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mapbox/landspeed.js.git"
+    },
     "dependencies": {
-        "mapnik": "*",
-        "eio": "*"
+        "mapnik": "~1.4.10"
     }
 }
