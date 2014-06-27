@@ -4,6 +4,8 @@ A simple [WMS](http://www.opengeospatial.org/standards/wms) server written in [n
 
 Only supports WMS 1.1 GetMap requests (bbox, width, height, and srs).
 
+[![Build Status](https://secure.travis-ci.org/mapbox/landspeed.js.svg)](http://travis-ci.org/mapbox/landspeed.js)
+[![Build Status](https://ci.appveyor.com/api/projects/status/3wsv30e0xp22591n)](https://ci.appveyor.com/project/Mapbox/landspeed-js)
 
 ## Requirements
 
