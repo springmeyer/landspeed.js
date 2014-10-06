@@ -1,6 +1,6 @@
 {
     "name": "landspeed",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "./server",
     "repository": {
         "type": "git",
