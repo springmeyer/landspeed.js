@@ -4,6 +4,7 @@ node_js:
   - "0.10"
 
 before_install:
+ - sudo apt-get -y install gdb
  - npm install crash
 
 install:
@@ -11,6 +12,4 @@ install:
  - ulimit -c unlimited -S
  - node -e "require('crash').crash()" || true
  - ls *
- - export NODE=$(which node)
- - sudo bash -c "ulimit -c unlimited && $NODE -e \"require('crash').crash()\""
- - ls *
+ - gdb `which node` core* -ex "thread apply all bt" -ex "set pagination 0" -batch
