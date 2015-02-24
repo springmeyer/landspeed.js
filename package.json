@@ -7,6 +7,6 @@
         "url": "git://github.com/mapbox/landspeed.js.git"
     },
     "dependencies": {
-        "mapnik": "~3.1.3"
+        "mapnik": "~3.2.0"
     }
 }
